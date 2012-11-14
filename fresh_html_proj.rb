@@ -15,13 +15,6 @@ index_text = '<!DOCTYPE html>
   </body>
 </html>'
 
-## JQuery Text
-jquery_text = ''
-source_file = File.open(ENV["HOME"] + '/code/lib/jquery/jquery-1.8.2.min.js')
-source_file.each do |line|
-  jquery_text += line
-end
-
 ## css text 
 css_text = '
 html {
@@ -54,6 +47,7 @@ Dir.chdir(ARGV.first)
 
 ## set project_home variable
 proj_dir = Dir.new(Dir.pwd)
+
 raise StandardError, 'The target directory is not empty. It must be empty before you can run this script' if (proj_dir.entries.length > 2)
 
 File.open("index.html", "w") do |f|
