@@ -1,9 +1,9 @@
-== fresh_html_proj.rb
+## fresh_html_proj.rb
 
-=== About
+### About
 A nifty ruby script I use to start up a simple html projects. It's hella fresh. Grabs the latest jquery.min file from google (ajax.googleapis.com). 
 
-=== How to use
+### How to use
 
 Add the following alias to your .bash_profile
 
