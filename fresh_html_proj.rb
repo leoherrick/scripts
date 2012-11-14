@@ -42,19 +42,13 @@ body {
 raise ArgumentError, 'You must add a single command-line argument matching the target project directory' if (ARGV.length == 0)
 raise ArgumentError, 'Too many command-line arguments! This script takes a single argument for the target directory' if (ARGV.length > 1)
 
-## if no directory currently exists, create one
-if !File.directory?(ARGV.first)
-  raise StandardError, 'A file already exists by that name. Please use a unique name for your new project.' if File.file?(ARGV.first)
-  Dir.mkdir(ARGV.first)
-end
-
 ## Change project home to target directory
 Dir.chdir(ARGV.first)
 
 ## set project_home variable
 proj_dir = Dir.new(Dir.pwd)
 
-raise StandardError, 'The target directory is not empty. You can only use an empty directory or a a different name.' if (proj_dir.entries.length > 2)
+raise StandardError, 'The target directory is not empty. You can only use an empty directory.' if (proj_dir.entries.length > 2)
 
 File.open("index.html", "w") do |f|
   f.puts index_text
