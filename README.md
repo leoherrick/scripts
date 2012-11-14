@@ -18,3 +18,4 @@ fresh_proj <name of directory>
 ```
 
 The `<name of the directory>` can be a path to the new directory location, or an existing *empty* directory.
+Oh... and you've gotta have ruby installed on your system. 
