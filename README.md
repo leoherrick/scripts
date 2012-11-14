@@ -17,4 +17,4 @@ Once you do this... act like a boss and start a new project by typing the follow
 fresh_proj <name of directory>
 ```
 
-The <name of the directory> can be a path to the new directory location, or an existing *empty* directory.
+The `<name of the directory>` can be a path to the new directory location, or an existing *empty* directory.
